@@ -1,0 +1,29 @@
+import os
+
+if os.name == 'nt':
+    os.system('cls')
+else:
+    os.system('clear')
+
+class Livro:
+    def __init__(self, nome: str, autor: str, paginas: int):
+        self.nome = nome
+        self.autor = autor
+        self.paginas = paginas
+
+    def __str__(self):
+        return f"Nome do livro: {self.nome} produzido pelo autor: {self.autor} e este livro possui {self.paginas} paginas"
+    
+    def comparar_tamanho(self, outro_livro):
+        if livro.paginas > outro_livro.paginas:
+            print(f"O livro {self.nome} é maior que o livro {outro_livro.nome}")
+        elif livro.paginas < outro_livro.paginas:
+            print(f"O livro {outro_livro.nome} é maior que o livro {self.nome}")
+        else:
+            print("Os dois livros são inguais")
+
+
+livro = Livro("A Divina Comédia", "Dante Alighier", 720)
+outro_livro = Livro("O Inferno", "Dan Brown", 448)
+
+livro.comparar_tamanho(outro_livro)
